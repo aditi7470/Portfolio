@@ -1,0 +1,15 @@
+{
+  "name": "aditi-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio website - Node/Express/EJS/MySQL",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "ejs": "^3.1.9",
+    "mysql2": "^3.3.0",
+    "dotenv": "^16.3.1"
+  }
+}

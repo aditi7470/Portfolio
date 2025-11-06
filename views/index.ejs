@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aditi Suhane | Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <%- include('partials/header') %>
+
+
+  <header class="text-center" style="margin-top:70px;">
+    <div class="container">
+      <h1>Hi there, I'm Aditi Suhane</h1>
+    </div>
+  </header>
+
+  
+  <section id="about" class="container">
+    <h2>About Me</h2>
+    <div class="about-box">
+      <div class="row align-items-center about-content">
+        <div class="col-md-4 text-center mb-3">
+          <img src="/images/me.jpg" alt="Aditi" class="img-fluid rounded-circle">
+        </div>
+        <div class="col-md-8">
+          <p>
+            A third-year computer engineering student at MIT ADT University. This is my portfolio, 
+            a showcase of my journey in the world of technology. I have a strong foundation in 
+            Data Structures and Algorithms (DSA) and frontend development, and I'm continuously 
+            expanding my skills. Explore my projects to see what I've been working on!
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="container">
+    <h2>Projects</h2>
+    <div class="projects-table">
+
+      <div class="project-card">
+        <img src="/images/fabric.png" alt="Fabric Fault Detection">
+        <h5>Fabric Fault Detection using Computer Vision</h5>
+        <p>
+          Developed an automated fabric defect detection system leveraging computer vision and 
+          deep learning techniques. The system uses CNN, YOLO, and RT-DETR models to identify, 
+          classify, and localize defects in textile materials in real-time.
+        </p>
+        <a href="#" class="btn">View Project</a>
+      </div>
+
+      <div class="project-card">
+        <img src="/images/elevator.avif" alt="Smart Elevator System">
+        <h5>Smart Elevator System</h5>
+        <p>
+          Designed and implemented a priority-based elevator control system that optimizes path 
+          selection using efficient scheduling algorithms, reducing wait times and improving 
+          energy efficiency.
+        </p>
+        <a href="#" class="btn">View Project</a>
+      </div>
+
+      <div class="project-card">
+        <img src="/images/teenage.webp" alt="Teenage Pregnancy Analysis">
+        <h5>Teenage Pregnancy: A Data-Driven Analysis</h5>
+        <p>
+          This project involved a comprehensive study on factors contributing to teenage 
+          pregnancy using data analysis and visualization to identify socio-economic and 
+          educational trends.
+        </p>
+        <a href="#" class="btn">View Project</a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section id="contact" class="container">
+    <h2>Contact</h2>
+    <form action="/contact" method="POST" class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required class="form-control mb-2">
+      <input type="email" name="email" placeholder="Your Email" required class="form-control mb-2">
+      <textarea name="message" placeholder="Your Message" required class="form-control mb-2"></textarea>
+      <button type="submit" class="btn btn-primary">Send Message</button>
+
+      <% if (typeof query !== 'undefined' && query.sent) { %>
+        <div class="alert alert-success mt-2">Message sent! Thanks.</div>
+      <% } %>
+    </form>
+  </section>
+
+  
+  <%- include('partials/footer') %>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
